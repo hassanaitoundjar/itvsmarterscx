@@ -1,19 +1,23 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import Image from '~/components/common/Image.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import { pricingPlans } from '~/data/pricing';
+
+import { pageKeywords } from '~/data/keywords';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'IPTV Smarters Pro — Best IPTV Service 2025 | 15,000+ Channels | HD/4K Streaming',
+  description: 'Best IPTV Service 2024 - IPTV Smarters Pro offers 15,000+ Live TV channels, 50,000+ movies & TV shows. Compatible with Android, iOS, Smart TV, Roku, Firestick, MAG, Kodi. Affordable IPTV subscription with Xtream Codes API. HD/4K streaming, EPG support, catch-up TV. Get your IPTV subscription today!',
+  keywords: pageKeywords.home.join(', '),
   ignoreTitleTemplate: true,
 };
 ---
@@ -25,340 +29,354 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
+        text: 'Subscribe',
+        href: '#pricing',
+        icon: 'tabler:credit-card',
+      },
+      {
+        text: 'Download',
+        href: '#steps',
         icon: 'tabler:download',
       },
-      { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/hero-image.webp', alt: 'IPTV Smarters Pro Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      Elevate Your Entertainment Experience with <span class="text-accent dark:text-white">IPTV Smarters Pro</span>
+      <br class="hidden md:inline" />
+      Watch Your Favorites Anywhere
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+      Discover the ultimate experience with Smarters Pro. Watch your favorite shows, movies, and live TV channels on-the-go. Seamless streaming, user-friendly interface, and endless content options. Try IPTV Smarters Pro today!
     </Fragment>
   </Hero>
-
-  <!-- Note Widget ******************* -->
-
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
 
   <!-- Features Widget *************** -->
 
   <Features
     id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
+    tagline="FEATURES"
+    title="WHAT IS IPTV SMARTERS?"
+    subtitle="The IPTV Smarters app is an exceptional video streaming player that enables your IPTV customers or end users to access and enjoy content such as Live TV, VOD, Series, and Catch-up TV, all provided by you. It is compatible with Android and iOS devices. Smart TVs.."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Multi-Device Compatibility',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          "A seamless integration between two great frameworks that offer high productivity, performance and versatility. Experience crystal-clear HD streaming with IPTV Smarters Pro. Whether you're watching live TV, movies, or on-demand content, enjoy unparalleled picture quality for an immersive viewing experience.",
+        icon: 'tabler:device-desktop',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'User-Friendly Interface',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          "Navigate through your favorite channels and content effortlessly with IPTV Smarters Pro's intuitive and user-friendly interface. Easily discover new shows, customize your playlists, and access advanced features with just a few clicks.",
+        icon: 'tabler:layout-dashboard',
       },
       {
-        title: 'Best Practices',
+        title: 'HD, 4K Streaming',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          "Experience crystal-clear HD streaming with IPTV Smarters Pro. Whether you're watching live TV, movies, or on-demand content, enjoy unparalleled picture quality for an immersive viewing experience.",
+        icon: 'tabler:screen-share',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Extensive Content Library',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'Access a vast library of entertainment with IPTV Smarters Pro. From live TV channels to on-demand movies and series, discover endless content options to suit every taste and preference.',
+        icon: 'tabler:library',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Welcome to IPTV Smarters Section **************** -->
+  <section class="relative not-prose py-12 md:py-20 bg-blue-50 dark:bg-slate-800/50">
+    <div class="absolute inset-0" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <!-- Header Section -->
+      <div class="text-center mb-12 md:mb-16">
+        <p class="text-sm md:text-base font-bold tracking-wide uppercase text-purple-600 dark:text-purple-400 mb-3">
+          Welcome to IPTV Smarters
+        </p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Your Ultimate Entertainment Destination
+        </h2>
+        <p class="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Experience seamless streaming with our cutting-edge IPTV solution. Access thousands of channels, movies, and shows anytime, anywhere.
+        </p>
+      </div>
 
-  <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro 5.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
+      <!-- First Section: Image Left, Content Right -->
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-16 md:mb-20">
+        <!-- Left Column: TV Image with Badges -->
+        <div class="order-2 md:order-1">
+          <div class="relative">
+            <!-- Purple Title -->
+           
+            
+           
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+            <!-- TV Image -->
+            <div class="relative rounded-lg overflow-hidden shadow-2xl">
+              <Image
+                src="~/assets/images/iptv-smarters.webp"
+                alt="Person watching IPTV on smart TV with LIVE TV, MOVIE, SERIES, ALL interface"
+                width={700}
+                height={500}
+                widths={[400, 600, 700, 800]}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                class="w-full rounded-lg "
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
 
-  <!-- Content Widget **************** -->
+        <!-- Right Column: Text and Benefits -->
+        <div class="order-1 md:order-2">
+          <p class="text-base  md:text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+            With our cutting-edge IPTV solution, accessing your favorite content has never been easier or more enjoyable. Whether you're a sports fanatic, a movie buff, or a TV show enthusiast, we've got you covered.
+          
+          </p>
 
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+          <div class="space-y-6 md:space-y-8">
+            <!-- Benefit 1 -->
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Simplify Your Experience</h3>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Navigate with ease and access a world of entertainment at your fingertips. Say goodbye to complexity and hello to simplicity.
+                </p>
+              </div>
+            </div>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+            <!-- Benefit 2 -->
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Endless Options</h3>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Explore a wide selection of channels, including live TV, sports, and more. There's something for everyone.
+                </p>
+              </div>
+            </div>
 
-  <!-- Content Widget **************** -->
+            <!-- Benefit 3 -->
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Start Today</h3>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Join IPTV Smarters and start enjoying entertainment made easy.{' '}
+                  <a href="#pricing" class="text-purple-600 underline hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300 font-semibold">
+                    Subscribe Now!
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+      <!-- Second Section: Content Left, Image Right -->
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+        <!-- Left Column: Text and Benefits -->
+        <div class="order-2 md:order-1">
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+            Simplify your entertainment with IPTV Smarters. Sign up today!
+          </h3>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+          <div class="space-y-6 md:space-y-8">
+            <!-- Benefit 1 -->
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Enjoy Secure Streaming</h3>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Your gateway to effortless entertainment. Stream securely, explore freely.
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Stream Smarter</h3>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Simplify your entertainment with IPTV Smarters. Secure streaming, endless choices.
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Discover Ease</h3>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Navigate easily, stream securely.{' '}
+                  <a href="#pricing" class="text-purple-600 underline hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300 font-semibold">
+                    Join IPTV Smarters today.
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: TV Image with Badges -->
+        <div class="order-1 md:order-2">
+          <div class="relative">
+            <!-- Purple Title and Badges -->
+            <div class="flex items-center gap-4 mb-6 flex-wrap">
+             
+            
+             
+           
+            <!-- TV Image -->
+            <div class="relative rounded-lg overflow-hidden shadow-2xl">
+              <Image
+                src="~/assets/images/iptv-smarters-pro.webp"
+                alt="Two people watching IPTV on smart TV with LIVE TV, MOVIES, SERIES, ALL interface"
+                width={700}
+                height={500}
+                widths={[400, 600, 700, 800]}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                class="w-full rounded-lg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    id="steps"
+    title="Simplify Your Experience: Easy Steps to Get Started"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Step 1: <span class="font-medium">Subscribe to Our Service</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          'Subscribe now and gain access to a world of entertainment.',
+        icon: 'tabler:credit-card',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Step 2: <span class="font-medium">Download Our App</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          'Download our app for seamless access to your favorite content.',
+        icon: 'tabler:download',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Step 3: <span class="font-medium">Enter Your Activation Codes</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Enter your activation codes (Xtream codes api) and start enjoying our services.',
+        icon: 'tabler:key',
       },
       {
-        title: 'Ready!',
+        title: 'Get Ready to Enjoy!',
         icon: 'tabler:check',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src: '~/assets/images/phone-home.webp',
       alt: 'Steps image',
     }}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Pricing Widget ****************** -->
 
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  <Pricing
+    id="pricing"
+    title="Iptv Smarters Pro Pricing Plans"
+    subtitle="One time payment"
+    prices={pricingPlans}
+  />
 
-  <!-- HighlightedPosts Widget ******* -->
+  <!-- Blog Widget ******* -->
 
   <BlogLatestPosts
     title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
+    information={`View all posts »
                 `}
   />
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    title="Frequently Asked Questions for IPTV SMARTERS PRO"
+    subtitle="IPTV Smarters Pro is a popular IPTV player that pairs with any IPTV service for an improved streaming experience."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
         title: 'What do I need to start?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'Subscribe up for iptv smarter pro above. After that, you will get information about username, password and url so you can log in to the smarter iptv app. Once you download the app and log into the app, you can start viewing channels.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'How can I install IPTV Smarters Pro on my devices?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          'Learn the simple steps to download and install IPTV Smarters Pro on your Android, iOS, Smart TV, macOS, or Windows devices.',
       },
       {
-        title: "What's something that you don't understand?",
+        title: "What's something you may find puzzling about IPTV Smarters Pro?",
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          "Explore FAQs to unravel any mysteries and optimize your IPTV Smarters Pro experience for seamless streaming.",
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'On which devices is it possible to install IPTV Smarters Pro?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          'This app is compatible with all devices running the Android operating system, which encompasses the Amazon Firestick, Fire TV, and various other Android devices.',
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'Is IPTV Smarters Pro Safe?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          'Yes, you can confidently install and utilize this application on any Fire TV or Android device without any concerns regarding safety.',
+      },
+      {
+        title: 'Is IPTV Smarters app Legal?',
+        description:
+          'Absolutely Yes. This app is 100% legal to install and use.',
       },
     ]}
   />
@@ -367,10 +385,10 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      { title: 'CHANNELS/VODS', amount: '50K+' },
+      { title: 'SATISFIED CLIENTS', amount: '15K+' },
+      { title: 'POSITIVE FEEDBACKS', amount: '1K+' },
+      { title: 'FREEBIES RELEASED', amount: '100%' },
     ]}
   />
 
@@ -380,20 +398,18 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Subscribe Now',
+        href: '#pricing',
+        icon: 'tabler:credit-card',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Experience Unlimited Entertainment with IPTV Smarters Pro
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Unlock a world of entertainment with IPTV Smarters Pro. Stream your favorite channels, movies, and shows on any device, anytime, anywhere.
     </Fragment>
   </CallToAction>
 </Layout>

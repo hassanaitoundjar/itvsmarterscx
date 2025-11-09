@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: IPTV Smarters Pro
+  site: 'https://iptvsmarters.cx'
   base: '/'
   trailingSlash: false
 
@@ -9,22 +9,23 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: IPTV Smarters Pro — Best IPTV Service 2024 | 15,000+ Channels | HD/4K Streaming
+    template: '%s — IPTV Smarters Pro'
+  description: "IPTV Smarters Pro — Best IPTV streaming service 2024 with 15,000+ Live TV channels, 50,000+ movies & TV shows. Compatible with Android, iOS, Smart TV, Roku, Firestick, MAG, Enigma2, Kodi. Stream HD/4K content with Xtream Codes API. Affordable IPTV subscription plans. Get your IPTV service today!"
+  keywords: "IPTV Smarters Pro, best IPTV service, IPTV streaming, premium IPTV, IPTV subscription, IPTV player, Smart TV IPTV, Android IPTV, iOS IPTV, Samsung Smart TV, LG Smart TV, Roku IPTV, Firestick IPTV, MAG IPTV, Enigma2, Kodi IPTV, Xtream Codes API, HD streaming, 4K streaming, Live TV, VOD, Video on Demand, streaming channels, movies, TV series, EPG, Electronic Program Guide, catch-up TV, best IPTV provider, IPTV app, affordable IPTV, cheap IPTV, reliable IPTV, IPTV setup, how to install IPTV, IPTV tutorial, best IPTV for Firestick, best IPTV for Android, IPTV service with EPG, best IPTV for sports, IPTV subscription plans, best IPTV player app"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: IPTV Smarters Pro
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: '@iptvsmarters'
+    site: '@iptvsmarters'
     cardType: summary_large_image
 
 i18n:

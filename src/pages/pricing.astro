@@ -6,9 +6,13 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { pricingPlans } from '~/data/pricing';
+import { pageKeywords } from '~/data/keywords';
 
 const metadata = {
-  title: 'Pricing',
+  title: 'Pricing — IPTV Smarters Pro Plans | Cheap IPTV Subscription | Best IPTV Deals 2024',
+  description: 'IPTV Smarters Pro pricing - Affordable IPTV subscription plans starting at $20/month. Choose from 1 Month, 12 Months plans. One-time payment for 15,000+ Live TV channels, 50,000+ movies & TV shows. Best IPTV deals with EPG support. Get cheap IPTV service today!',
+  keywords: pageKeywords.pricing.join(', '),
 };
 ---
 
@@ -17,97 +21,16 @@ const metadata = {
 
   <HeroText
     tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
+    title="IPTV Smarters Pro Pricing Plans"
+    subtitle="Choose the perfect plan for unlimited entertainment. One-time payment for seamless streaming."
   />
 
   <!-- Pricing Widget ******************* -->
 
   <Prices
-    title="Our prices"
-    subtitle="Only pay for what you need"
-    prices={[
-      {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
-        price: 29,
-        period: 'per month',
-        items: [
-          {
-            description: 'Etiam in libero, et volutpat',
-          },
-          {
-            description: 'Aenean ac nunc dolor tristique',
-          },
-          {
-            description: 'Cras scelerisque accumsan lib',
-          },
-          {
-            description: 'In hac habitasse',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
-        },
-      },
-      {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
-        items: [
-          {
-            description: 'Proin vel laoreet',
-          },
-          {
-            description: 'Ut efficitur habitasse egestas',
-          },
-          {
-            description: 'Volutpat hac curabitur',
-          },
-          {
-            description: 'Pellentesque blandit ut nibh',
-          },
-          {
-            description: 'Donec fringilla sem',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
-        },
-        hasRibbon: true,
-        ribbonTitle: 'popular',
-      },
-      {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
-        items: [
-          {
-            description: 'Curabitur suscipit risus',
-          },
-          {
-            description: 'Aliquam habitasse malesuada',
-          },
-          {
-            description: 'Suspendisse sit amet blandit',
-          },
-          {
-            description: 'Suspendisse auctor blandit dui',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
-        },
-      },
-    ]}
+    title="Iptv Smarters Pro Pricing Plans"
+    subtitle="One time payment"
+    prices={pricingPlans}
   />
 
   <!-- Features3 Widget ************** -->
